@@ -29,10 +29,9 @@ function Weather() {
     "December",
   ];
   const currentMonth = months[month];
-
   return (
-    <div className="w-1200 h-850 bg-violet-450 rounded-xl flex">
-      <div className="flex text-3xl">
+    <div className="w-1200 h-850 bg-violet-450 rounded-xl flex p-3 ">
+      <div>
         <svg
           className="h-5 w-5 text-red-500"
           fill="none"
@@ -52,11 +51,13 @@ function Weather() {
             d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
           />
         </svg>
-        <h1 className="">City</h1>
-        <h1>
+        <h1 className="text-3xl" id="City">
+          Kyiv
+        </h1>
+        <h1 className="text-xl">
           {currentMonth} {dayNumber}
         </h1>
-        <h1>{currentDay}</h1>
+        <h1 className="text-xl mx-1">{currentDay}</h1>
       </div>
     </div>
   );
