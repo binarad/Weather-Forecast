@@ -1,66 +1,63 @@
-function Weather() {
-  const date = new Date();
-  const dayNumber = date.getDate();
-  const day = date.getDay();
-  const weekdaysName = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+// import { useState, useEffect } from "react";
 
-  const currentDay = weekdaysName[day];
-  const month = date.getMonth();
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  const currentMonth = months[month];
-  return (
-    <div className="w-1200 h-850 bg-violet-450 rounded-xl flex p-3 ">
-      <div>
-        <svg
-          className="h-5 w-5 text-red-500"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-        <h1 className="text-3xl" id="City">
-          Kyiv
-        </h1>
-        <h1 className="text-xl">
-          {currentMonth} {dayNumber}
-        </h1>
-        <h1 className="text-xl mx-1">{currentDay}</h1>
-      </div>
-    </div>
-  );
-}
+// const BASE_URL = `https://api.weatherapi.com/v1/current.json?key=485589c5ce3b49e2a1d182121242805&q=Kyiv&aqi=no`
 
-export default Weather;
+// function Weather() {
+//   const date = new Date();
+//   const dayNumber = date.getDate();
+//   const day = date.getDay();
+//   const weekdaysName = [
+//     "Sunday",
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday",
+//   ];
+
+//   const currentDay = weekdaysName[day];
+//   const month = date.getMonth();
+//   const months = [
+//     "January",
+//     "February",
+//     "March",
+//     "April",
+//     "May",
+//     "June",
+//     "July",
+//     "August",
+//     "September",
+//     "October",
+//     "November",
+//     "December",
+//   ];
+//   const currentMonth = months[month];
+//   const [temp, setTemp] = useState();
+
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       const result = await fetch(BASE_URL);
+//       const data = await result.json();
+//       console.log(data);
+
+//     }
+//     fetchData();
+//   }, []);
+
+//   return (
+// 		<div className='w-1200 h-850 bg-violet-450 rounded-xl flex p-3 '>
+// 			<div className='flex w-40 flex-col'>
+// 				<h1 id='City'>Kyiv</h1>
+// 				<h1 className='text-xl'>
+// 					{currentMonth} {dayNumber}
+// 				</h1>
+// 				<h1 className='text-xl mx-1'>{currentDay}</h1>
+// 				<p>{temp}</p>
+// 			</div>
+// 			<div className='flex w-500 h-80 justyfy-center items-center'></div>
+// 		</div>
+// 	)
+// }
+
+// export default Weather;
